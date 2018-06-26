@@ -1,0 +1,40 @@
+tostada = 0
+palta = 0
+jugo = 0
+huevo = 0
+manzana = 0
+platano = 0
+pera = 0
+mandarina = 0
+arandanos = 0
+fresas = 0
+aguaymantos = 0
+pollo = 0
+arroz = 0
+papa = 0
+ensalada = 0
+choclo = 0
+atun = 0
+pescado = 0
+carne = 0
+camote = 0
+nueces = 0
+almendras = 0
+sandia = 0
+
+dias = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo']
+comidas = ['Desayuno', 'Media mañana', 'Almuerzo', 'Media tarde', 'Cena']
+desayunos = ["1 tostada + 0.5 palta", "1 vaso jugo + 2 tostadas", "2 huevos + 1 tostada", "2 huevos + 0.5 palta", "1 vaso jugo + 1 palta", "1 vaso jugo + 1 tostada + 1 huevo", "1 huevo + 1 vaso jugo + 1 tostada"]
+mms = ["1 manzana", "1 mandarina", "1 pera", "1 plátano", "1 taza arándanos", "1 taza fresas", "1 taza aguaymantos"]
+almuerzos = ["1 filete pollo + 1 taza arroz + 1 ensalada", "1 filete pescado + 1 papa + 1 ensalada", "1 lata atún + 1 choclo + 1 ensalada", "1 ensalada + 3 huevos", "1 filete carne + 1 palta", "1 filete pollo + 1 camote + 1 ensalada", "1 filete pescado + 1 ensalada"]
+mts = ["1 manzana", "3 mandarinas", "1 pera", "1 plátano", "0.25 tazas nueces", "0.25 tazas almendras", "2 tazas sandía"]
+cenas = ["1 tostada + 1 palta", "1 ensalada + 1 camote", "1 filete pollo + 2 papas", "1 filete carne + 1 ensalada", "2 choclos + 1 lata atún", "1 ensalada + 3 huevos", "1 tostada + 0.5 palta + 2 huevos"]
+
+from prettytable import PrettyTable
+for x in range(0, len(dias)):
+    dieta = {'Desayuno': desayunos[x],
+               'Media mañana': mms[x],
+               'Almuerzo': almuerzos[x],
+               'Media tarde': mts[x],
+               'Cena': cenas[x]}
+    
