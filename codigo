@@ -29,12 +29,25 @@ mms = ["1 manzana", "1 mandarina", "1 pera", "1 plátano", "1 taza arándanos", 
 almuerzos = ["1 filete pollo + 1 taza arroz + 1 ensalada", "1 filete pescado + 1 papa + 1 ensalada", "1 lata atún + 1 choclo + 1 ensalada", "1 ensalada + 3 huevos", "1 filete carne + 1 palta", "1 filete pollo + 1 camote + 1 ensalada", "1 filete pescado + 1 ensalada"]
 mts = ["1 manzana", "3 mandarinas", "1 pera", "1 plátano", "0.25 tazas nueces", "0.25 tazas almendras", "2 tazas sandía"]
 cenas = ["1 tostada + 1 palta", "1 ensalada + 1 camote", "1 filete pollo + 2 papas", "1 filete carne + 1 ensalada", "2 choclos + 1 lata atún", "1 ensalada + 3 huevos", "1 tostada + 0.5 palta + 2 huevos"]
+dieta = {}
 
+import random
 from prettytable import PrettyTable
-for x in range(0, len(dias)):
-    dieta = {'Desayuno': desayunos[x],
-               'Media mañana': mms[x],
-               'Almuerzo': almuerzos[x],
-               'Media tarde': mts[x],
-               'Cena': cenas[x]}
-    
+for a in range(0, len(dias)):
+    a = random.randrange(0, len(dias))
+    dieta['Desayuno:'] = desayunos[a]
+for b in range(0, len(dias)):
+    b = random.randrange(0, len(dias))
+    dieta['Media mañana:'] = mms[b]
+for c in range(0, len(dias)):
+    c = random.randrange(0, len(dias))
+    dieta['Almuerzo:'] = almuerzos[c]
+for d in range(0, len(dias)):
+    d = random.randrange(0, len(dias))
+    dieta['Media tarde:'] = mts[d]
+for e in range(0, len(dias)):
+    e = random.randrange(0, len(dias))
+    dieta['Cena:'] = cenas[e]
+
+for x, k in dieta.items():
+    print(x, k)
