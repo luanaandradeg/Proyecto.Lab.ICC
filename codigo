@@ -93,36 +93,31 @@ def menu1():
     print("6. Terminar programa\n\n")
     opcion1 = input("Opción: ")
     if opcion1 == "1":
-        value = input("Escriba la comida a añadir: ")
+        value = input("\nEscriba la comida a añadir: ")
         desayunos.append(value)
-        print("¡Tu comida fue añadida correctamente!\n\n\n\n\n")
-        menu()
+        print("\n¡Tu comida fue añadida correctamente!\n")
     elif opcion1 == "2":
-        value = input("Escriba la comida a añadir: ")
+        value = input("\nEscriba la comida a añadir: ")
         mms.append(value)
-        print("¡Tu comida fue añadida correctamente!\n\n\n\n\n")
-        menu()
+        print("\n¡Tu comida fue añadida correctamente!\n")
     elif opcion1 == "3":
-        value = input("Escriba la comida a añadir: ")
+        value = input("\nEscriba la comida a añadir: ")
         almuerzos.append(value)
-        print("¡Tu comida fue añadida correctamente!\n\n\n\n\n")
-        menu()
+        print("\n¡Tu comida fue añadida correctamente!\n")
     elif opcion1 == "4":
-        value = input("Escriba la comida a añadir: ")
+        value = input("\nEscriba la comida a añadir: ")
         mts.append(value)
-        print("¡Tu comida fue añadida correctamente!\n\n\n\n\n")
-        menu()
+        print("\n¡Tu comida fue añadida correctamente!\n")
     elif opcion1 == "5":
-        value = input("Escriba la comida a añadir: ")
+        value = input("\nEscriba la comida a añadir: ")
         cenas.append(value)
-        print("¡Tu comida fue añadida correctamente!\n\n\n\n\n")
-        menu()
+        print("\n¡Tu comida fue añadida correctamente!\n")
     elif opcion1=="6":
         global x
         x=1
         print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEsperamos le haya sido útil. ¡Hasta pronto!")
     else:
-        print("Por favor, elija otra opción.")
+        print("Por favor, elija otra opción.\n")
         menu1()
 
 def menu():
@@ -161,8 +156,9 @@ def menu():
         limpiar()
         menu()
     elif opcion=="7":
-        limpiar()
         menu1()
+        limpiar()
+        menu()
     elif opcion=="8":
         limpiar()
         menu()
