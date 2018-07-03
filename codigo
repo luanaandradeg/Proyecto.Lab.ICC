@@ -95,19 +95,28 @@ def menu1():
     if opcion1 == "A":
       value = str(input("Escriba la comida a añadir: "))
       desayunos.append(value)
+      print("¡Tu comida fue añadida correctamente!")
       menu()
     elif opcion1 == "B":
       value = str(input("Escriba la comida a añadir: "))
       mms.append(value)
+      print("¡Tu comida fue añadida correctamente!")
+      menu()
     elif opcion1 == "C":
       value = str(input("Escriba la comida a añadir: "))
       almuerzos.append(value)
+      print("¡Tu comida fue añadida correctamente!")
+      menu()
     elif opcion1 == "D":
       value = str(input("Escriba la comida a añadir: "))
       mts.append(value)
+      print("¡Tu comida fue añadida correctamente!")
+      menu()
     elif opcion1 == "E":
       value = str(input("Escriba la comida a añadir: "))
       cenas.append(value)
+      print("¡Tu comida fue añadida correctamente!")
+      menu()
     elif opcion1=="F":
         global x
         x=1
