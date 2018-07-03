@@ -82,47 +82,49 @@ def diaaleatorio():
         print(x, k)
 
 import random
-from prettytable import PrettyTable
+
 def menu1():
-    print("Elija la opción a la que desea añadir comidas")
-    print("A. Desayuno aleatorio")
-    print("B. Media mañana aleatoria")
-    print("C. Almuerzo aleatorio")
-    print("D. Media tarde aleatoria")
-    print("E. Cena aleatoria")
-    print("F. Terminar programa\n\n")
+    print("Elija la opción a la que desea añadir")
+    print("1. Desayuno ")
+    print("2. Media mañana ")
+    print("3. Almuerzo ")
+    print("4. Media tarde ")
+    print("5. Cena ")
+    print("6. Terminar programa\n\n")
     opcion1 = input("Opción: ")
-    if opcion1 == "A":
-      value = str(input("Escriba la comida a añadir: "))
-      desayunos.append(value)
-      print("¡Tu comida fue añadida correctamente!")
-      menu()
-    elif opcion1 == "B":
-      value = str(input("Escriba la comida a añadir: "))
-      mms.append(value)
-      print("¡Tu comida fue añadida correctamente!")
-      menu()
-    elif opcion1 == "C":
-      value = str(input("Escriba la comida a añadir: "))
-      almuerzos.append(value)
-      print("¡Tu comida fue añadida correctamente!")
-      menu()
-    elif opcion1 == "D":
-      value = str(input("Escriba la comida a añadir: "))
-      mts.append(value)
-      print("¡Tu comida fue añadida correctamente!")
-      menu()
-    elif opcion1 == "E":
-      value = str(input("Escriba la comida a añadir: "))
-      cenas.append(value)
-      print("¡Tu comida fue añadida correctamente!")
-      menu()
-    elif opcion1=="F":
+    if opcion1 == "1":
+        value = input("Escriba la comida a añadir: ")
+        desayunos.append(value)
+        print("¡Tu comida fue añadida correctamente!\n\n\n\n\n")
+        menu()
+    elif opcion1 == "2":
+        value = input("Escriba la comida a añadir: ")
+        mms.append(value)
+        print("¡Tu comida fue añadida correctamente!\n\n\n\n\n")
+        menu()
+    elif opcion1 == "3":
+        value = input("Escriba la comida a añadir: ")
+        almuerzos.append(value)
+        print("¡Tu comida fue añadida correctamente!\n\n\n\n\n")
+        menu()
+    elif opcion1 == "4":
+        value = input("Escriba la comida a añadir: ")
+        mts.append(value)
+        print("¡Tu comida fue añadida correctamente!\n\n\n\n\n")
+        menu()
+    elif opcion1 == "5":
+        value = input("Escriba la comida a añadir: ")
+        cenas.append(value)
+        print("¡Tu comida fue añadida correctamente!\n\n\n\n\n")
+        menu()
+    elif opcion1=="6":
         global x
         x=1
         print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEsperamos le haya sido útil. ¡Hasta pronto!")
     else:
-      print("Por favor, elija otra opción")
+        print("Por favor, elija otra opción.")
+        menu1()
+
 def menu():
     print("1. Desayuno aleatorio")
     print("2. Media mañana aleatoria")
