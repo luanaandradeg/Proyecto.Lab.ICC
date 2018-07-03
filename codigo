@@ -83,7 +83,7 @@ def diaaleatorio():
 
 import random
 from prettytable import PrettyTable
-def menuañadir():
+def menu1():
     print("Elija la opción a la que desea añadir comidas")
     print("A. Desayuno aleatorio")
     print("B. Media mañana aleatoria")
@@ -92,7 +92,28 @@ def menuañadir():
     print("E. Cena aleatoria")
     print("F. Terminar programa\n\n")
     opcion1 = input("Opción: ")
- 
+    if opcion1 == "A":
+      value = str(input("Escriba la comida a añadir: "))
+      desayunos.append(value)
+      menu()
+    elif opcion1 == "B":
+      value = str(input("Escriba la comida a añadir: "))
+      mms.append(value)
+    elif opcion1 == "C":
+      value = str(input("Escriba la comida a añadir: "))
+      almuerzos.append(value)
+    elif opcion1 == "D":
+      value = str(input("Escriba la comida a añadir: "))
+      mts.append(value)
+    elif opcion1 == "E":
+      value = str(input("Escriba la comida a añadir: "))
+      cenas.append(value)
+    elif opcion1=="F":
+        global x
+        x=1
+        print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEsperamos le haya sido útil. ¡Hasta pronto!")
+    else:
+      print("Por favor, elija otra opción")
 def menu():
     print("1. Desayuno aleatorio")
     print("2. Media mañana aleatoria")
@@ -130,7 +151,7 @@ def menu():
         menu()
     elif opcion=="7":
         limpiar()
-        menuañadir()
+        menu1()
     elif opcion=="8":
         limpiar()
         menu()
