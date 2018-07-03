@@ -83,7 +83,16 @@ def diaaleatorio():
 
 import random
 from prettytable import PrettyTable
-
+def menuañadir():
+    print("Elija la opción a la que desea añadir comidas")
+    print("A. Desayuno aleatorio")
+    print("B. Media mañana aleatoria")
+    print("C. Almuerzo aleatorio")
+    print("D. Media tarde aleatoria")
+    print("E. Cena aleatoria")
+    print("F. Terminar programa\n\n")
+    opcion1 = input("Opción: ")
+ 
 def menu():
     print("1. Desayuno aleatorio")
     print("2. Media mañana aleatoria")
@@ -121,7 +130,7 @@ def menu():
         menu()
     elif opcion=="7":
         limpiar()
-        menu()
+        menuañadir()
     elif opcion=="8":
         limpiar()
         menu()
