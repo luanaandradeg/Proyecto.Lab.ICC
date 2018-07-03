@@ -1,27 +1,3 @@
-tostada = 0
-palta = 0
-jugo = 0
-huevo = 0
-manzana = 0
-platano = 0
-pera = 0
-mandarina = 0
-arandanos = 0
-fresas = 0
-aguaymantos = 0
-pollo = 0
-arroz = 0
-papa = 0
-ensalada = 0
-choclo = 0
-atun = 0
-pescado = 0
-carne = 0
-camote = 0
-nueces = 0
-almendras = 0
-sandia = 0
-
 dias = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo']
 comidas = ['Desayuno', 'Media mañana', 'Almuerzo', 'Media tarde', 'Cena']
 desayunos = ["1 tostada + 0.5 palta", "1 vaso jugo + 2 tostadas", "2 huevos + 1 tostada", "2 huevos + 0.5 palta", "1 vaso jugo + 1 palta", "1 vaso jugo + 1 tostada + 1 huevo", "1 huevo + 1 vaso jugo + 1 tostada"]
@@ -31,23 +7,134 @@ mts = ["1 manzana", "3 mandarinas", "1 pera", "1 plátano", "0.25 tazas nueces",
 cenas = ["1 tostada + 1 palta", "1 ensalada + 1 camote", "1 filete pollo + 2 papas", "1 filete carne + 1 ensalada", "2 choclos + 1 lata atún", "1 ensalada + 3 huevos", "1 tostada + 0.5 palta + 2 huevos"]
 dieta = {}
 
+def desayunoaleatorio():
+    comida = {}
+    x = 0
+    for a in range(0, len(dias)):
+        if x == 0:
+            a = random.randrange(0, len(dias))
+            x = x + 1
+            comida['Desayuno:'] = desayunos[a]
+            for x, k in comida.items():
+                print("\n", x, k)
+
+def mediamananaaleatoria():
+    comida = {}
+    x = 0
+    for b in range(0, len(dias)):
+        if x == 0:
+            b = random.randrange(0, len(dias))
+            x = x + 1
+            comida['Media mañana:'] = mms[b]
+            for x, k in comida.items():
+                print("\n", x, k)
+
+def almuerzoaleatorio():
+    comida = {}
+    x = 0
+    for c in range(0, len(dias)):
+        if x == 0:
+            c = random.randrange(0, len(dias))
+            x = x + 1
+            comida['Almuerzo:'] = almuerzos[c]
+            for x, k in comida.items():
+                print(x, k)
+
+def mediatardealeatoria():
+    comida = {}
+    x = 0
+    for d in range(0, len(dias)):
+        if x == 0:
+            d = random.randrange(0, len(dias))
+            x = x + 1
+            comida['Media tarde:'] = mts[d]
+            for x, k in comida.items():
+                print(x, k)
+
+def cenaaleatoria():
+    comida = {}
+    x = 0
+    for e in range(0, len(dias)):
+        if x == 0:
+            e = random.randrange(0, len(dias))
+            x = x + 1
+            comida['Cena:'] = cenas[e]
+            for x, k in comida.items():
+                print(x, k)
+
+def diaaleatorio():
+    for a in range(0, len(dias)):
+        a = random.randrange(0, len(dias))
+        dieta['Desayuno:'] = desayunos[a]
+    for b in range(0, len(dias)):
+        b = random.randrange(0, len(dias))
+        dieta['Media mañana:'] = mms[b]
+    for c in range(0, len(dias)):
+        c = random.randrange(0, len(dias))
+        dieta['Almuerzo:'] = almuerzos[c]
+    for d in range(0, len(dias)):
+        d = random.randrange(0, len(dias))
+        dieta['Media tarde:'] = mts[d]
+    for e in range(0, len(dias)):
+        e = random.randrange(0, len(dias))
+        dieta['Cena:'] = cenas[e]
+    for x, k in dieta.items():
+        print(x, k)
+
 import random
 from prettytable import PrettyTable
-for a in range(0, len(dias)):
-    a = random.randrange(0, len(dias))
-    dieta['Desayuno:'] = desayunos[a]
-for b in range(0, len(dias)):
-    b = random.randrange(0, len(dias))
-    dieta['Media mañana:'] = mms[b]
-for c in range(0, len(dias)):
-    c = random.randrange(0, len(dias))
-    dieta['Almuerzo:'] = almuerzos[c]
-for d in range(0, len(dias)):
-    d = random.randrange(0, len(dias))
-    dieta['Media tarde:'] = mts[d]
-for e in range(0, len(dias)):
-    e = random.randrange(0, len(dias))
-    dieta['Cena:'] = cenas[e]
 
-for x, k in dieta.items():
-    print(x, k)
+def menu():
+    print("1. Desayuno aleatorio")
+    print("2. Media mañana aleatoria")
+    print("3. Almuerzo aleatorio")
+    print("4. Media tarde aleatoria")
+    print("5. Cena aleatoria")
+    print("6. Menú completo de un día")
+    print("7. Agregar opciones de comidas")
+    print("8. Lista de insumos")
+    print("9. Terminar programa\n\n")
+    opcion=input("Opción: ")
+    if opcion=="1":
+        desayunoaleatorio()
+        limpiar()
+        menu()
+    elif opcion=="2":
+        mediamananaaleatoria()
+        limpiar()
+        menu()
+    elif opcion=="3":
+        almuerzoaleatorio()
+        limpiar()
+        menu()
+    elif opcion=="4":
+        mediatardealeatoria()
+        limpiar()
+        menu()
+    elif opcion=="5":
+        cenaaleatoria()
+        limpiar()
+        menu()
+    elif opcion=="6":
+        diaaleatorio()
+        limpiar()
+        menu()
+    elif opcion=="7":
+        limpiar()
+        menu()
+    elif opcion=="8":
+        limpiar()
+        menu()
+    elif opcion=="9":
+        global x
+        x=1
+        print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEsperamos le haya sido útil. ¡Hasta pronto!")
+    else:
+        print("Opción inválida. Por favor, ingrese una opción valida.\n\n\n\n\n\n\n\n\n")
+        menu()
+def limpiar():
+    print("\n"*3)
+x=0
+while x==0:
+    menu()
+    break
