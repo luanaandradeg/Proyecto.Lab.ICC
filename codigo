@@ -6,6 +6,11 @@ almuerzos = ["1 filete pollo + 1 taza arroz + 1 ensalada", "1 filete pescado + 1
 mts = ["1 manzana", "3 mandarinas", "1 pera", "1 plátano", "0.25 tazas nueces", "0.25 tazas almendras", "2 tazas sandía"]
 cenas = ["1 tostada + 1 palta", "1 ensalada + 1 camote", "1 filete pollo + 2 papas", "1 filete carne + 1 ensalada", "2 choclos + 1 lata atún", "1 ensalada + 3 huevos", "1 tostada + 0.5 palta + 2 huevos"]
 dieta = {}
+desayunosd = {"Desayuno 1: ":"1 tostada + 0.5 palta", "Desayuno 2: ":"1 vaso jugo + 2 tostadas", "Desayuno 3: ":"2 huevos + 1 tostada", "Desayuno 4: ":"2 huevos + 0.5 palta", "Desayuno 5: ":"1 vaso jugo + 1 palta", "Desayuno 6: ":"1 vaso jugo + 1 tostada + 1 huevo", "Desayuno 7: ":"1 huevo + 1 vaso jugo + 1 tostada"}
+mmsd = {"Media mañana 1: ":"1 manzana", "Media mañana 2: ":"1 mandarina", "Media mañana 3: ":"1 pera", "Media mañana 4: ":"1 plátano", "Media mañana 5: ":"1 taza arándanos", "Media mañana 6: ":"1 taza fresas", "Media mañana 7: ":"1 taza aguaymantos"}
+almuerzosd = {"Almuerzo 1: ":"1 filete pollo + 1 taza arroz + 1 ensalada", "Almuerzo 2: ":"1 filete pescado + 1 papa + 1 ensalada", "Almuerzo 3: ":"1 lata atún + 1 choclo + 1 ensalada", "Almuerzo 4: ":"1 ensalada + 3 huevos", "Almuerzo 5: ":"1 filete carne + 1 palta", "Almuerzo 6: ":"1 filete pollo + 1 camote + 1 ensalada", "Almuerzo 7: ":"1 filete pescado + 1 ensalada"}
+mtsd = {"Media tarde 1: ":"1 manzana", "Media tarde 2: ":"3 mandarinas", "Media tarde 3: ":"1 pera", "Media tarde 4: ":"1 plátano", "Media tarde 5: ":"0.25 tazas nueces", "Media tarde 6: ":"0.25 tazas almendras", "Media tarde 7: ":"2 tazas sandía"}
+cenasd = {"Cena 1: ":"1 tostada + 1 palta", "Cena 2: ":"1 ensalada + 1 camote", "Cena 3: ":"1 filete pollo + 2 papas", "Cena 4: ":"1 filete carne + 1 ensalada", "Cena 5: ":"2 choclos + 1 lata atún", "Cena 6: ":"1 ensalada + 3 huevos", "Cena 7: ":"1 tostada + 0.5 palta + 2 huevos"}
 
 def desayunoaleatorio():
     comida = {}
@@ -83,7 +88,7 @@ def diaaleatorio():
 
 import random
 def prevelim():
-      print("Elija la opción a la que desea eliminar")
+      print("Elija la opción en la cual desea eliminar una comida")
       print("1. Desayuno ")
       print("2. Media mañana ")
       print("3. Almuerzo ")
@@ -92,27 +97,53 @@ def prevelim():
       print("6. Terminar programa\n\n")
       opcione = input("Opción: ")
       if opcione == "1":
-        elegida = input("\nEscriba la comida a eliminar: ")
-        print("\n¡Tu comida fue eliminada correctamente!\n")
+            for v in desayunosd.values():
+                print(v)
+            elegida = str(input("\nEscriba la comida a eliminar: "))
+            del desayunosd[elegida]
+            print("\n¡Tu comida fue eliminada correctamente!\n")
+            for k in desayunosd.values():
+                print(k)
       elif opcione == "2":
-        elegida = input("\nEscriba la comida a eliminar: ")
-        print("\n¡Tu comida fue eliminada correctamente!\n")
+            for k in mmsd.values():
+                print(k)
+            elegida = str(input("\nEscriba la comida a eliminar: "))
+            del mmsd[elegida]
+            print("\n¡Tu comida fue eliminada correctamente!\n")
+            for k in mmsd.values():
+                print(k)
       elif opcione == "3":
-        elegida = input("\nEscriba la comida a eliminar: ")
-        print("\n¡Tu comida fue eliminada correctamente!\n")
+            for k in almuerzosd.values():
+                print(k)
+            elegida = str(input("\nEscriba la comida a eliminar: "))
+            del almuerzosd[elegida]
+            print("\n¡Tu comida fue eliminada correctamente!\n")
+            for k in almuerzosd.values():
+                print(k)
       elif opcione == "4":
-        elegida = input("\nEscriba la comida a eliminar: ")
-        print("\n¡Tu comida fue eliminada correctamente!\n")
+            for k in mtsd.values():
+                print(k)
+            elegida = str(input("\nEscriba la comida a eliminar: "))
+            del mtsd[elegida]
+            print("\n¡Tu comida fue eliminada correctamente!\n")
+            for k in mtsd.values():
+                print(k)
       elif opcione == "5":
-        elegida = input("\nEscriba la comida a eliminar: ")
-        print("\n¡Tu comida fue eliminada correctamente!\n")
+            for k in cenasd.values():
+                print(k)
+            elegida = str(input("\nEscriba la comida a eliminar: "))
+            del cenasd[elegida]
+            print("\n¡Tu comida fue eliminada correctamente!\n")
+            for k in cenasd.values():
+                print(k)
       elif opcione=="6":
-        global x
-        x=1
-        print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEsperamos le haya sido útil. ¡Hasta pronto!")
+            global x
+            x=1
+            print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEsperamos le haya sido útil. ¡Hasta pronto!")
       else:
-        print("Por favor, elija otra opción.\n")
-        prevelim()
+            print("Por favor, elija otra opción.\n")
+            prevelim()
+
 def menu1():
     print("Elija la opción a la que desea añadir")
     print("1. Desayuno ")
@@ -123,32 +154,32 @@ def menu1():
     print("6. Terminar programa\n\n")
     opcion1 = input("Opción: ")
     if opcion1 == "1":
-        value = input("\nEscriba la comida a añadir: ")
-        desayunos.append(value)
-        print("\n¡Tu comida fue añadida correctamente!\n")
+            value = input("\nEscriba la comida a añadir: ")
+            desayunos.append(value)
+            print("\n¡Tu comida fue añadida correctamente!\n")
     elif opcion1 == "2":
-        value = input("\nEscriba la comida a añadir: ")
-        mms.append(value)
-        print("\n¡Tu comida fue añadida correctamente!\n")
+            value = input("\nEscriba la comida a añadir: ")
+            mms.append(value)
+            print("\n¡Tu comida fue añadida correctamente!\n")
     elif opcion1 == "3":
-        value = input("\nEscriba la comida a añadir: ")
-        almuerzos.append(value)
-        print("\n¡Tu comida fue añadida correctamente!\n")
+            value = input("\nEscriba la comida a añadir: ")
+            almuerzos.append(value)
+            print("\n¡Tu comida fue añadida correctamente!\n")
     elif opcion1 == "4":
-        value = input("\nEscriba la comida a añadir: ")
-        mts.append(value)
-        print("\n¡Tu comida fue añadida correctamente!\n")
+            value = input("\nEscriba la comida a añadir: ")
+            mts.append(value)
+            print("\n¡Tu comida fue añadida correctamente!\n")
     elif opcion1 == "5":
-        value = input("\nEscriba la comida a añadir: ")
-        cenas.append(value)
-        print("\n¡Tu comida fue añadida correctamente!\n")
+            value = input("\nEscriba la comida a añadir: ")
+            cenas.append(value)
+            print("\n¡Tu comida fue añadida correctamente!\n")
     elif opcion1=="6":
-        global x
-        x=1
-        print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEsperamos le haya sido útil. ¡Hasta pronto!")
+            global x
+            x=1
+            print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEsperamos le haya sido útil. ¡Hasta pronto!")
     else:
-        print("Por favor, elija otra opción.\n")
-        menu1()
+            print("Por favor, elija otra opción.\n")
+            menu1()
 
 def menu():
     print("1. Desayuno aleatorio")
