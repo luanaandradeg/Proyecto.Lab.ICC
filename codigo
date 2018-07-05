@@ -6,11 +6,11 @@ almuerzos = ["1 filete pollo + 1 taza arroz + 1 ensalada", "1 filete pescado + 1
 mts = ["1 manzana", "3 mandarinas", "1 pera", "1 plátano", "0.25 tazas nueces", "0.25 tazas almendras", "2 tazas sandía"]
 cenas = ["1 tostada + 1 palta", "1 ensalada + 1 camote", "1 filete pollo + 2 papas", "1 filete carne + 1 ensalada", "2 choclos + 1 lata atún", "1 ensalada + 3 huevos", "1 tostada + 0.5 palta + 2 huevos"]
 dieta = {}
-desayunosd = {"Desayuno 1: ":"1 tostada + 0.5 palta", "Desayuno 2: ":"1 vaso jugo + 2 tostadas", "Desayuno 3: ":"2 huevos + 1 tostada", "Desayuno 4: ":"2 huevos + 0.5 palta", "Desayuno 5: ":"1 vaso jugo + 1 palta", "Desayuno 6: ":"1 vaso jugo + 1 tostada + 1 huevo", "Desayuno 7: ":"1 huevo + 1 vaso jugo + 1 tostada"}
-mmsd = {"Media mañana 1: ":"1 manzana", "Media mañana 2: ":"1 mandarina", "Media mañana 3: ":"1 pera", "Media mañana 4: ":"1 plátano", "Media mañana 5: ":"1 taza arándanos", "Media mañana 6: ":"1 taza fresas", "Media mañana 7: ":"1 taza aguaymantos"}
-almuerzosd = {"Almuerzo 1: ":"1 filete pollo + 1 taza arroz + 1 ensalada", "Almuerzo 2: ":"1 filete pescado + 1 papa + 1 ensalada", "Almuerzo 3: ":"1 lata atún + 1 choclo + 1 ensalada", "Almuerzo 4: ":"1 ensalada + 3 huevos", "Almuerzo 5: ":"1 filete carne + 1 palta", "Almuerzo 6: ":"1 filete pollo + 1 camote + 1 ensalada", "Almuerzo 7: ":"1 filete pescado + 1 ensalada"}
-mtsd = {"Media tarde 1: ":"1 manzana", "Media tarde 2: ":"3 mandarinas", "Media tarde 3: ":"1 pera", "Media tarde 4: ":"1 plátano", "Media tarde 5: ":"0.25 tazas nueces", "Media tarde 6: ":"0.25 tazas almendras", "Media tarde 7: ":"2 tazas sandía"}
-cenasd = {"Cena 1: ":"1 tostada + 1 palta", "Cena 2: ":"1 ensalada + 1 camote", "Cena 3: ":"1 filete pollo + 2 papas", "Cena 4: ":"1 filete carne + 1 ensalada", "Cena 5: ":"2 choclos + 1 lata atún", "Cena 6: ":"1 ensalada + 3 huevos", "Cena 7: ":"1 tostada + 0.5 palta + 2 huevos"}
+desayunosd = {"Desayuno 1":"\n1 tostada + 0.5 palta\n", "Desayuno 2":"\n1 vaso jugo + 2 tostadas\n", "Desayuno 3":"\n2 huevos + 1 tostada\n", "Desayuno 4":"\n2 huevos + 0.5 palta\n", "Desayuno 5":"\n1 vaso jugo + 1 palta\n", "Desayuno 6":"\n1 vaso jugo + 1 tostada + 1 huevo\n", "Desayuno 7":"\n1 huevo + 1 vaso jugo + 1 tostada\n"}
+mmsd = {"Media mañana 1":"\n1 manzana\n", "Media mañana 2":"\n1 mandarina\n", "Media mañana 3":"\n1 pera\n", "Media mañana 4":"\n1 plátano\n", "Media mañana 5":"\n1 taza arándanos\n", "Media mañana 6":"\n1 taza fresas\n", "Media mañana 7":"\n1 taza aguaymantos\n"}
+almuerzosd = {"Almuerzo 1":"\n1 filete pollo + 1 taza arroz + 1 ensalada\n", "Almuerzo 2":"\n1 filete pescado + 1 papa + 1 ensalada\n", "Almuerzo 3":"\n1 lata atún + 1 choclo + 1 ensalada\n", "Almuerzo 4":"\n1 ensalada + 3 huevos\n", "Almuerzo 5":"\n1 filete carne + 1 palta\n", "Almuerzo 6":"\n1 filete pollo + 1 camote + 1 ensalada\n", "Almuerzo 7":"\n1 filete pescado + 1 ensalada\n"}
+mtsd = {"Media tarde 1":"\n1 manzana\n", "Media tarde 2":"\n3 mandarinas\n", "Media tarde 3":"\n1 pera\n", "Media tarde 4":"\n1 plátano\n", "Media tarde 5":"\n0.25 tazas nueces\n", "Media tarde 6":"\n0.25 tazas almendras\n", "Media tarde 7":"\n2 tazas sandía\n"}
+cenasd = {"Cena 1":"\n1 tostada + 1 palta\n", "Cena 2":"\n1 ensalada + 1 camote\n", "Cena 3":"\n1 filete pollo + 2 papas\n", "Cena 4":"\n1 filete carne + 1 ensalada\n", "Cena 5":"\n2 choclos + 1 lata atún\n", "Cena 6":"\n1 ensalada + 3 huevos\n", "Cena 7":"\n1 tostada + 0.5 palta + 2 huevos\n"}
 
 def desayunoaleatorio():
     comida = {}
@@ -97,45 +97,45 @@ def prevelim():
       print("6. Terminar programa\n\n")
       opcione = input("Opción: ")
       if opcione == "1":
-            for v in desayunosd.values():
-                print(v)
+            for k, v in desayunosd.items():
+                print(k, v)
             elegida = str(input("\nEscriba la comida a eliminar: "))
             del desayunosd[elegida]
-            print("\n¡Tu comida fue eliminada correctamente!\n")
-            for k in desayunosd.values():
-                print(k)
+            print("\n¡Tu comida fue eliminada correctamente!\nA continuación le mostraremos la lista actualizada:\n")
+            for k, v in desayunosd.items():
+                print(k, v)
       elif opcione == "2":
-            for k in mmsd.values():
-                print(k)
+            for k, v in mmsd.items():
+                print(k, v)
             elegida = str(input("\nEscriba la comida a eliminar: "))
             del mmsd[elegida]
-            print("\n¡Tu comida fue eliminada correctamente!\n")
-            for k in mmsd.values():
-                print(k)
+            print("\n¡Tu comida fue eliminada correctamente!\nA continuación le mostraremos la lista actualizada:\n")
+            for k, v in mmsd.items():
+                print(k, v)
       elif opcione == "3":
-            for k in almuerzosd.values():
-                print(k)
+            for k, v in almuerzosd.items():
+                print(k, v)
             elegida = str(input("\nEscriba la comida a eliminar: "))
             del almuerzosd[elegida]
-            print("\n¡Tu comida fue eliminada correctamente!\n")
-            for k in almuerzosd.values():
-                print(k)
+            print("\n¡Tu comida fue eliminada correctamente!\nA continuación le mostraremos la lista actualizada:\n")
+            for k, v in almuerzosd.items():
+                print(k, v)
       elif opcione == "4":
-            for k in mtsd.values():
-                print(k)
+            for k, v in mtsd.items():
+                print(k, v)
             elegida = str(input("\nEscriba la comida a eliminar: "))
             del mtsd[elegida]
-            print("\n¡Tu comida fue eliminada correctamente!\n")
-            for k in mtsd.values():
-                print(k)
+            print("\n¡Tu comida fue eliminada correctamente!\nA continuación le mostraremos la lista actualizada:\n")
+            for k, v in mtsd.items():
+                print(k, v)
       elif opcione == "5":
-            for k in cenasd.values():
-                print(k)
+            for k, v in cenasd.items():
+                print(k, v)
             elegida = str(input("\nEscriba la comida a eliminar: "))
             del cenasd[elegida]
-            print("\n¡Tu comida fue eliminada correctamente!\n")
-            for k in cenasd.values():
-                print(k)
+            print("\n¡Tu comida fue eliminada correctamente!\nA continuación le mostraremos la lista actualizada:\n")
+            for k, v in cenasd.items():
+                print(k, v)
       elif opcione=="6":
             global x
             x=1
@@ -237,3 +237,4 @@ x=0
 while x==0:
     menu()
     break
+
