@@ -92,20 +92,19 @@ def prevelim():
       print("6. Terminar programa\n\n")
       opcione = input("Opción: ")
       if opcione == "1":
-        
+        elegida = input("\nEscriba la comida a eliminar: ")
         print("\n¡Tu comida fue eliminada correctamente!\n")
       elif opcione == "2":
-        
-        
+        elegida = input("\nEscriba la comida a eliminar: ")
         print("\n¡Tu comida fue eliminada correctamente!\n")
       elif opcione == "3":
-        
+        elegida = input("\nEscriba la comida a eliminar: ")
         print("\n¡Tu comida fue eliminada correctamente!\n")
       elif opcione == "4":
-        
+        elegida = input("\nEscriba la comida a eliminar: ")
         print("\n¡Tu comida fue eliminada correctamente!\n")
       elif opcione == "5":
-        
+        elegida = input("\nEscriba la comida a eliminar: ")
         print("\n¡Tu comida fue eliminada correctamente!\n")
       elif opcione=="6":
         global x
@@ -207,4 +206,3 @@ x=0
 while x==0:
     menu()
     break
-
