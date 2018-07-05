@@ -82,7 +82,38 @@ def diaaleatorio():
         print(x, k)
 
 import random
-
+def prevelim():
+      print("Elija la opción a la que desea eliminar")
+      print("1. Desayuno ")
+      print("2. Media mañana ")
+      print("3. Almuerzo ")
+      print("4. Media tarde ")
+      print("5. Cena ")
+      print("6. Terminar programa\n\n")
+      opcione = input("Opción: ")
+      if opcione == "1":
+        
+        print("\n¡Tu comida fue eliminada correctamente!\n")
+      elif opcione == "2":
+        
+        
+        print("\n¡Tu comida fue eliminada correctamente!\n")
+      elif opcione == "3":
+        
+        print("\n¡Tu comida fue eliminada correctamente!\n")
+      elif opcione == "4":
+        
+        print("\n¡Tu comida fue eliminada correctamente!\n")
+      elif opcione == "5":
+        
+        print("\n¡Tu comida fue eliminada correctamente!\n")
+      elif opcione=="6":
+        global x
+        x=1
+        print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEsperamos le haya sido útil. ¡Hasta pronto!")
+      else:
+        print("Por favor, elija otra opción.\n")
+        prevelim()
 def menu1():
     print("Elija la opción a la que desea añadir")
     print("1. Desayuno ")
