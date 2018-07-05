@@ -128,8 +128,7 @@ def menu():
     print("5. Cena aleatoria")
     print("6. Menú completo de un día")
     print("7. Agregar opciones de comidas")
-    print("8. Lista de insumos")
-    print("9. Terminar programa\n\n")
+    print("8. Terminar programa\n\n")
     opcion=input("Opción: ")
     if opcion=="1":
         desayunoaleatorio()
@@ -160,9 +159,6 @@ def menu():
         limpiar()
         menu()
     elif opcion=="8":
-        limpiar()
-        menu()
-    elif opcion=="9":
         global x
         x=1
         print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEsperamos le haya sido útil. ¡Hasta pronto!")
@@ -175,3 +171,4 @@ x=0
 while x==0:
     menu()
     break
+
