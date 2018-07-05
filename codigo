@@ -154,25 +154,55 @@ def menu1():
     print("6. Terminar programa\n\n")
     opcion1 = input("Opción: ")
     if opcion1 == "1":
+            for k, v in desayunosd.items():
+                print(k, v)
+            elegida = str(input("\nEscriba la opción a añadir: "))
             value = input("\nEscriba la comida a añadir: ")
             desayunos.append(value)
-            print("\n¡Tu comida fue añadida correctamente!\n")
+            desayunosd[elegida]="\n"+value
+            print("\n¡Tu comida fue añadida correctamente!\nA continuación le mostraremos la lista actualizada:\n")
+            for k, v in desayunosd.items():
+                print(k, v)
     elif opcion1 == "2":
+            for k, v in mmsd.items():
+                print(k, v)
+            elegida = str(input("\nEscriba la opción a añadir: "))
             value = input("\nEscriba la comida a añadir: ")
             mms.append(value)
-            print("\n¡Tu comida fue añadida correctamente!\n")
+            mmsd[elegida]="\n"+value
+            print("\n¡Tu comida fue añadida correctamente!\nA continuación le mostraremos la lista actualizada:\n")
+            for k, v in mmsd.items():
+                print(k, v)
     elif opcion1 == "3":
+            for k, v in almuerzosd.items():
+                print(k, v)
+            elegida = str(input("\nEscriba la opción a añadir: "))
             value = input("\nEscriba la comida a añadir: ")
             almuerzos.append(value)
-            print("\n¡Tu comida fue añadida correctamente!\n")
+            almuerzosd[elegida]="\n"+value
+            print("\n¡Tu comida fue añadida correctamente!\nA continuación le mostraremos la lista actualizada:\n")
+            for k, v in almuerzosd.items():
+                print(k, v)
     elif opcion1 == "4":
+            for k, v in mtsd.items():
+                print(k, v)
+            elegida = str(input("\nEscriba la opción a añadir: "))
             value = input("\nEscriba la comida a añadir: ")
             mts.append(value)
-            print("\n¡Tu comida fue añadida correctamente!\n")
+            mtsd[elegida]="\n"+value
+            print("\n¡Tu comida fue añadida correctamente!\nA continuación le mostraremos la lista actualizada:\n")
+            for k, v in mtsd.items():
+                print(k, v)
     elif opcion1 == "5":
+            for k, v in cenasd.items():
+                print(k, v)
+            elegida = str(input("\nEscriba la opción a añadir: "))
             value = input("\nEscriba la comida a añadir: ")
             cenas.append(value)
-            print("\n¡Tu comida fue añadida correctamente!\n")
+            cenasd[elegida]="\n"+value
+            print("\n¡Tu comida fue añadida correctamente!\nA continuación le mostraremos la lista actualizada:\n")
+            for k, v in cenasd.items():
+                print(k, v)
     elif opcion1=="6":
             global x
             x=1
@@ -237,4 +267,3 @@ x=0
 while x==0:
     menu()
     break
-
